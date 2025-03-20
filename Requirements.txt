@@ -1,0 +1,8 @@
+scapy
+pickle-mixin
+smtplib
+getpass
+threading
+os
+sys
+
