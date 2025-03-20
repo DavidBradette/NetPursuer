@@ -29,6 +29,8 @@ sudo python3 NetPursuer.py
 ```
 
 ## Configuration
+Modify the network subnet in the script before running:
+- `ip_range`: Set this to match your local network (e.g., `192.168.1.0/24`).
 Modify the following variables in the script before running:
 - `SMTP_SERVER`: Your email provider's SMTP server
 - `SMTP_PORT`: The SMTP port (e.g., 465 for SSL, 587 for TLS)
