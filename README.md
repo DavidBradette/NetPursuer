@@ -2,7 +2,7 @@ NetPursuer - Network Monitoring Tool (v1.0.0)
 ====================================
 
 ## Description
-NetPursuer is a network monitoring tool that scans your local network every 5 minutes to detect new devices. It creates a `detected_devices.pkl` file that remembers the devices detected on the first scan, preventing duplicate alerts for known devices. When a new device is detected, it sends an email alert containing the device's IP address and MAC address. This tool helps you stay informed about new connections and potential unauthorized access. The first time scan will send an email for every device in your network, so be prepared for that. After the initial scan, you will only get emails for newly connected devices.
+NetPursuer is a network monitoring tool that scans your local network every 5 minutes to detect new devices. It creates a `detected_devices.pkl` file that remembers the devices detected on the first scan, preventing duplicate alerts for known devices. When a new device is detected, it sends an email alert containing the device's IP address and MAC address. This tool helps you stay informed about new connections and potential unauthorized access.
 
 ## Features
 - Automated network scanning every 5 minutes
@@ -27,25 +27,6 @@ Since network scanning requires administrative privileges, you may need to run i
 ```
 sudo python3 NetPursuer.py
 ```
-
-## Running NetPursuer in the Background
-If you want to keep NetPursuer running without keeping the terminal open, you can run it in the background using `nohup`:
-```
-nohup python3 /path/to/NetPursuer.py > netpursuer.log 2>&1 &
-```
-- This runs the script in the background and saves output to `netpursuer.log`.
-- The process will continue running even after you close the terminal.
-
-### Stopping the Background Process
-To find the process ID (PID) of NetPursuer:
-```
-ps aux | grep NetPursuer.py
-```
-Then, stop it using:
-```
-kill <PID>
-```
-(replace `<PID>` with the actual process ID).
 
 ## Configuration
 Modify the following variables in the script before running:
